@@ -1,3 +1,4 @@
+ifeq ($(BOARD_NEEDS_NL80211_DRIVER_CMD),true)
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -33,4 +34,5 @@ LOCAL_MODULE := libnl
 
 include $(BUILD_SHARED_LIBRARY)
 #include $(BUILD_STATIC_LIBRARY)
+endif # BOARD_NEEDS_NL80211_DRIVER_CMD
 
